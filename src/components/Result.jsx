@@ -7,25 +7,18 @@ import VideosSearch from "./VideosSearch";
 import NewsSearch from "./NewsSearch";
 
 const Result = () => {
-  const { result, getResults, loading, search, setSearch } = useResultContext();
+  const { result, getResults, loading, search } = useResultContext();
   const location = useLocation();
   console.log(location)
   useEffect(() => {
-    getResults('?query=JavaScript Mastery&limit=300&related_keywords=true');
+    getResults(`?query=State Bank of Pakistan&limit=300&videos`);
   }, [])
   
+  console.log(result)
   
+
+ 
   const searchTerms = () => {
-
-    // const obj = {
-    //   search: "search here",
-    //   images: "Images here",
-    //   videos: "Videos here",
-    //   news:"News here"
-    // }
-
-    // return location.pathname.includes(['/search','/images','/videos'])  obj[search]
-
     if (location.pathname === '/search') {
       return <AllSearch result={result} />
     }
@@ -44,11 +37,9 @@ const Result = () => {
   }
 
 
-  console.log(loading)
   return (
     <div>
-      {loading && console.log("loading.....")}
-      {searchTerms()}
+      {loading ? <p>Loading...</p> : searchTerms()}
     </div>
   )
 } 

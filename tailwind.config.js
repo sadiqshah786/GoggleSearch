@@ -9,6 +9,10 @@ export default {
     extend: {
       fontFamily: {
         popins:["Poppins","sans"]
+      },
+      colors: {
+        primary: "#1a0dab",
+        secondry:"#4d5156"
       }
     },
   },

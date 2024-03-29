@@ -1,17 +1,11 @@
-import { Card } from "antd";
-import PropTypes from "prop-types"; // Import PropTypes
+import PropTypes from "prop-types"; 
+import SearchList from "./SearchList";
 
 const AllSearch = ({ result }) => {
   console.log(result);
   return (
     <div>
-      {result?.results?.map((item) => {
-        return (
-          <Card key={item?.position} title="Card title" bordered={false}>
-            Card content
-          </Card>
-        );
-      })}
+      <SearchList result={result} />
     </div>
   );
 };

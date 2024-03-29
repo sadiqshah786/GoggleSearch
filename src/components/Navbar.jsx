@@ -10,13 +10,13 @@ const Navbar = ({ darkTheme, setDarkTheme }) => {
       <>
        <div className="p-6 flex items-center flex-wrap justify-between">
       <div>
-        <Link to="/" className="font-Poppins font-bold text-2xl">Google Search 🔎</Link>
+        <Link to="/" className="font-Poppins font-bold text-2xl">Sadiq Search 🔎</Link>
       </div>
 
       <div>
         <ul className="flex gap-2">
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/">All</Link>
           </li>
           <li>
             <Link to="/images">Images</Link>
